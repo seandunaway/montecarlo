@@ -25,6 +25,21 @@ draw:
         average: 18%
         low: 9%
 
+# 66% risk 5% to make 10% ($10k per contract)
+
+balance:
+        high: $11,341,500
+        average: $7,931,737
+        low: $4,485,000
+win:
+        high: 75%
+        average: 66%
+        low: 57%
+draw:
+        high: 43%
+        average: 18%
+        low: 8%
+
 # 66% risk 10% to make 20%
 
 balance:
