@@ -10,6 +10,21 @@ interations: 1,000
 ....................................................................................................
 ....................................................................................................
 
+# 66% risk 5 to make 10
+
+balance:
+        high: $5,827,750
+        average: $3,910,053
+        low: $2,101,500
+win:
+        high: 76%
+        average: 66%
+        low: 57%
+draw:
+        high: 46%
+        average: 18%
+        low: 9%
+
 # 66% risk 10 to make 20
 
 balance:
@@ -25,20 +40,20 @@ draw:
         average: 29%
         low: 10%
 
-# 66% risk 5 to make 10
+# 66% risk 20 to make 40
 
 balance:
-        high: $5,827,750
-        average: $3,910,053
-        low: $2,101,500
+        high: $28,572,000
+        average: $21,904,915
+        low: $11,190,000
 win:
-        high: 76%
+        high: 75%
         average: 66%
-        low: 57%
+        low: 52%
 draw:
-        high: 46%
-        average: 18%
-        low: 9%
+        high: 100%
+        average: 47%
+        low: 13%
 
 #1, $6,000, contracts: 1, reward: 1,000, risk: 500, draw: 0%, win: true
 #2, $5,500, contracts: 1, reward: 1,000, risk: 500, draw: 8%, win: false
