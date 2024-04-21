@@ -10,7 +10,7 @@ interations: 1,000
 ....................................................................................................
 ....................................................................................................
 
-# 66% risk 5% to make 10%
+# 66% risk 5 to make 10 ($5k/contract)
 
 balance:
         high: $5,827,750
@@ -25,7 +25,7 @@ draw:
         average: 18%
         low: 9%
 
-# 66% risk 5% to make 10% ($10k per contract)
+# 66% risk 10 to make 20 ($10k/contract)
 
 balance:
         high: $11,341,500
@@ -40,7 +40,7 @@ draw:
         average: 18%
         low: 8%
 
-# 66% risk 10% to make 20%
+# 66% risk 10 to make 20 ($5k/contract)
 
 balance:
         high: $13,535,500
@@ -55,7 +55,7 @@ draw:
         average: 29%
         low: 10%
 
-# 66% risk 20% to make 40%
+# 66% risk 20 to make 40 ($5k/contract)
 
 balance:
         high: $28,572,000
