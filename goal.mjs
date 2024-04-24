@@ -7,7 +7,7 @@ let contracts_margin = 5_000
 let point_value = 50
 
 let points = 0
-while (balance <= goal) {
+while (balance < goal) {
 	let contracts = Math.min(Math.trunc(balance / contracts_margin), contracts_max)
 
 	balance += contracts * point_value
