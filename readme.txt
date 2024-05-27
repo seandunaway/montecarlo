@@ -72,6 +72,14 @@ draw:
         low: 13%
 
 
+$ ./expectancy 66.66 2
+1
+
+# is 50% 4r better than 80% 2r?
+$ expr $(./expectancy.mjs 50 4) '>' $(./expectancy.mjs 80 2)
+1       # true
+
+
 $ ./goal.mjs
 # 100 contracts max
 1,000%: 284 points
