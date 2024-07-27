@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-let balance = 5_000
+let balance = 10_000
 let contracts = 1
 let contracts_maximum = 100
-let balance_per_contract = 5_000
+let balance_per_contract = 10_000
 let win_rate = 0.66
-let reward_points = 20
-let risk_points = 10
+let reward_points = 10
+let risk_points = 5
 let points_value = 50
 let trade_count = 252
 
