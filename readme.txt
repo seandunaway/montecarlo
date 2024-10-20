@@ -1362,4 +1362,4 @@ payout percent required for breakeven: 6.56%
 actual payout percent: 37.10%
 edge against the house: 30.54%
 
-summary: with a 50.00% win rate and 1R, for every account purchased for $98.45, you would statisitcally expect to return $226.96 gross and $128.51 net profit
+summary: with a 50.00% win rate and 1R, for every account purchased for $98.45, you would statisitcally expect to return $226.96 gross and $128.51 net profit, for a return on investment of 130.53%

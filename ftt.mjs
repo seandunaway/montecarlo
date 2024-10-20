@@ -69,6 +69,7 @@ let payout_breakeven = account_cost / payout_max
 let payout_percent = paidout / (paidout + blowedup)
 let edge = payout_percent - payout_breakeven
 let expected_value = account_cost * (1 + edge)
+let roi = expected_value / account_cost
 console.info(`\
 total accounts: ${iterations}
 total payouts: ${paidout}
@@ -80,7 +81,7 @@ payout percent required for breakeven: ${p(payout_breakeven)}
 actual payout percent: ${p(payout_percent)}
 edge against the house: ${p(edge)}
 
-summary: with a ${p(trade_probability)} win rate and ${trade_reward / trade_risk}R, for every account purchased for $${account_cost}, you would statisitcally expect to return $${(account_cost + expected_value).toFixed(2)} gross and $${expected_value.toFixed(2)} net profit
+summary: with a ${p(trade_probability)} win rate and ${trade_reward / trade_risk}R, for every account purchased for $${account_cost}, you would statisitcally expect to return $${(account_cost + expected_value).toFixed(2)} gross and $${expected_value.toFixed(2)} net profit, for a return on investment of ${p(roi)}
 `)
 
 function p(float) {
