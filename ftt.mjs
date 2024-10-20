@@ -34,13 +34,13 @@ for (let iteration = 1; iteration <= iterations; iteration++) {
 		}
 		trade++
 
-		if (pnl + account_value > account_target && day > days_min) {
+		if (pnl + account_value >= account_target && day > days_min) {
 			account_success = true
 			break
 		}
 
 		if (pnl > pnl_high) pnl_high = pnl
-		if (account_value + pnl <= (account_value + pnl_high) * 0.95) {
+		if (pnl + account_value <= pnl_high + (account_value * 0.95)) {
 			account_success = false
 			break
 		}
