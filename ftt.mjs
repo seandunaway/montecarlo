@@ -62,26 +62,33 @@ for (let iteration = 1; iteration <= iterations; iteration++) {
 	console.info(`#${iteration} ${mark}: ${trade} trades in ${day} days`)
 }
 
-let expense = iterations * account_cost
 let revenue = paidout * payout_max
-let net = revenue - expense
+let expense = iterations * account_cost
+let profit = revenue - expense
 let payout_breakeven = account_cost / payout_max
-let payout_percent = paidout / (paidout + blowedup)
-let edge = payout_percent - payout_breakeven
-let expected_value = account_cost * (1 + edge)
+let payout_actual = paidout / iterations
+let blowedup_actual = blowedup / iterations
+let expected_value = (payout_actual * (payout_max - account_cost)) - (blowedup_actual * account_cost)
+let expected_value2 = (revenue - expense) / iterations
 let roi = expected_value / account_cost
-console.info(`\
+let edge = roi - payout_breakeven // @todo double check this math
+console.info(`
 total accounts: ${iterations}
 total payouts: ${paidout}
 total blowups: ${blowedup}
-total expense: ${expense}
 total revenue: ${revenue}
-total net profit: ${net}
-payout percent required for breakeven: ${p(payout_breakeven)}
-actual payout percent: ${p(payout_percent)}
+total expense: ${expense}
+total profit: ${profit}
+payout breakeven: ${p(payout_breakeven)}
+payout actual: ${p(payout_actual)}
+value of payout ${payout_max}
+value of blowup ${account_cost}
+expected value: ${expected_value}
+expected value (monte carlo): ${expected_value2}
+return on investment: ${p(roi)}
 edge against the house: ${p(edge)}
 
-summary: with a ${p(trade_probability)} win rate and ${trade_reward / trade_risk}R, for every account purchased for $${account_cost}, you would statisitcally expect to return $${(account_cost + expected_value).toFixed(2)} gross and $${expected_value.toFixed(2)} net profit, for a return on investment of ${p(roi)}
+summary: with a ${p(trade_probability)} win rate and ${trade_reward / trade_risk}R, you would statisitcally expect to reach payout on ${p(payout_actual)} of accounts that payout $${payout_max} and blowup ${p(blowedup_actual)} accounts that cost $${account_cost} which would return $${(account_cost + expected_value).toFixed(2)} gross and $${expected_value.toFixed(2)} net profit, for a return on investment of ${p(roi)}
 `)
 
 function p(float) {
