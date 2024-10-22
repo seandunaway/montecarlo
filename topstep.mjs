@@ -22,9 +22,9 @@ const xfa_payout_required_profit = 200.00
 
 const xfa_abandon_after_first_payout = false
 
-ok(trade_reward < combine_target / 2, 'error: reward breaks consistency rule')
-ok(trade_risk > combine_stop / 2, 'error: risk breaks daily loss limit')
-ok(trade_reward > xfa_payout_required_profit, 'error: reward breaks daily profit minimum')
+ok(trade_reward <= combine_target / 2, 'error: reward breaks consistency rule')
+ok(trade_risk >= combine_stop / 2, 'error: risk breaks daily loss limit')
+ok(trade_reward >= xfa_payout_required_profit, 'error: reward breaks daily profit minimum')
 
 let combine_count = 0
 let combine_success = 0
