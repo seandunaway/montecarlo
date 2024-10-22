@@ -6,8 +6,8 @@ import {stdout} from 'node:process'
 const iterations = 10000
 
 const trade_win = 0.50
-const trade_reward = 1000.00
-const trade_risk = -1000.00
+const trade_reward = 500.00
+const trade_risk = -500.00
 
 const combine_cost = 50.00
 const combine_target = 3000.00
