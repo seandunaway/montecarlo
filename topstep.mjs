@@ -38,6 +38,7 @@ let xfa_trade_success = 0
 
 let total_cost = 0.00
 let total_profit = 0.00
+let payouts = []
 
 for (let iteration = 1; iteration <= iterations; iteration++) {
 	// purchase combine
@@ -129,6 +130,7 @@ for (let iteration = 1; iteration <= iterations; iteration++) {
 			total_profit += xfa_pnl * xfa_payout_percent
 			xfa_pnl = xfa_pnl * (1 - xfa_payout_percent)
 			xfa_payout_required_day = 0
+			payouts.push(iteration)
 			stdout.write('💰 ')
 
 			if (xfa_abandon_after_first_payout) break
@@ -232,6 +234,47 @@ total_profit_net_per_count: ${c(total_profit_net_per_count)}
 total_profit_factor_per_count: ${f(total_profit_factor_per_count)}
 
 roi: ${p(roi)}
+`)
+
+let streaks = []
+let streaks_total = 0
+let streaks_max = 0
+let streaks_avg = 0
+let dryspells = []
+let dryspells_total = 0
+let dryspells_max = 0
+let dryspells_avg = 0
+
+let streak_count = 1
+let payouts_last = 0
+
+for (let i = 0; i < payouts.length; i++) {
+	if (payouts[i] == payouts_last) streak_count++
+	if (payouts[i] > payouts_last) {
+		dryspells.push(payouts[i] - payouts_last)
+		streaks.push(streak_count)
+		streak_count = 1
+	}
+	payouts_last = payouts[i]
+}
+
+for (let i = 0; i < streaks.length; i++) {
+	streaks_total += streaks[i]
+	if (streaks[i] > streaks_max) streaks_max = streaks[i]
+}
+streaks_avg = streaks_total / streaks.length
+
+for (let i = 0; i < dryspells.length; i++) {
+	dryspells_total += dryspells[i]
+	if (dryspells[i] > dryspells_max) dryspells_max = dryspells[i]
+}
+dryspells_avg = dryspells_total / dryspells.length
+
+console.info(`\
+streaks_max: ${streaks_max}
+streaks_avg: ${f(streaks_avg)}
+dryspells_max: ${dryspells_max}
+dryspells_avg: ${f(dryspells_avg)}
 `)
 
 function c(currency = 0.00) {
