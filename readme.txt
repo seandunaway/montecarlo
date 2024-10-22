@@ -425,42 +425,47 @@ $ ./topstep.mjs
 #99 ✔️ ✖️ ✔️ ✖️ ✖️ ✔️ ✔️ ✖️ ✖️ ✖️ ✔️ ✔️ ✖️ ✖️ ✖️ 💣
 #100 ✖️ ✖️ ✔️ ✖️ ✖️ ✔️ ✔️ ✔️ ✔️ ✖️ ✔️ ✔️ ✔️ ✖️ ✖️ ✔️ ✖️ ✖️ ✔️ ✖️ ✖️ 💣
 
-combine_count: 100
-combine_trade_count: 1,565
-combine_trade_success: 783
-combine_trade_probability: 50.03%
-combine_trade_count_per_combine_count: 15.65
-combine_success: 28
-combine_success_probability: 28%
-combine_count_per_success: 3.57
-combine_cost_per_success: $178.57
+combine_count: 100,000
+combine_trade_count: 422,230
+combine_trade_success: 210,532
+combine_trade_probability: 49.86%
+combine_trade_count_per_combine_count: 4.22
+combine_success: 29,475
+combine_success_probability: 29.48%
+combine_count_per_success: 3.39
+combine_cost_per_success: $169.64
 
-xfa_count: 28
-xfa_trade_count: 653
-xfa_trade_success: 334
-xfa_trade_probability: 51.15%
-xfa_trade_count_per_xfa_count: 23.32
-xfa_success: 16
-xfa_success_probability: 57.14%
-xfa_count_per_success: 1.75
-xfa_cost_per_success: $262.50
+xfa_count: 29,475
+xfa_trade_count: 243,467
+xfa_trade_success: 121,992
+xfa_trade_probability: 50.11%
+xfa_trade_count_per_xfa_count: 8.26
+xfa_success: 12,168
+xfa_success_probability: 41.28%
+xfa_count_per_success: 2.42
+xfa_cost_per_success: $363.35
 
-account_count: 100
-account_success: 16
-account_success_probability: 16%
-account_count_per_success: 6.25
-account_count_combine_per_success: 6.25
-account_count_xfa_per_success: 1.75
-account_trade_count_per_account_count: 138.63
+account_count: 100,000
+account_success: 12,168
+account_success_probability: 12.17%
+account_count_per_success: 8.22
+account_count_combine_per_success: 8.22
+account_count_xfa_per_success: 2.42
+account_trade_count_per_account_count: 54.71
 
-account_cost_per_success: $575.00
-account_cost_combine_per_success: $312.50
-account_cost_xfa_per_success: $262.50
-account_cost_per_success2: $575.00
+account_cost_per_success: $774.26
+account_cost_combine_per_success: $410.91
+account_cost_xfa_per_success: $363.35
+account_cost_per_success2: $774.26
 
-total_cost_per_success: $575.00
-total_profit_per_success: $2,015.63
-total_profit_net_per_success: $1,440.63
-total_profit_factor_per_success: 2.51
+total_cost_per_success: $774.26
+total_profit_per_success: $2,278.44
+total_profit_net_per_success: $1,504.17
+total_profit_factor_per_success: 1.94
 
-roi: 250.54%
+total_cost_per_count: $94.21
+total_profit_per_count: $277.24
+total_profit_net_per_count: $183.03
+total_profit_factor_per_count: 1.94
+
+roi: 194.27%
