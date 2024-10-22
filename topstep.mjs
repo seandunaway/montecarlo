@@ -175,6 +175,11 @@ let total_profit_per_success = total_profit / account_success
 let total_profit_net_per_success = total_profit_net / account_success
 let total_profit_factor_per_success = total_profit_net_per_success / total_cost_per_success
 
+let total_cost_per_count = total_cost / account_count
+let total_profit_per_count = total_profit / account_count
+let total_profit_net_per_count = total_profit_net / account_count
+let total_profit_factor_per_count = total_profit_net_per_count / total_cost_per_count
+
 let roi = total_profit_net_per_success / total_cost_per_success
 
 console.info(`
@@ -220,6 +225,11 @@ total_cost_per_success: ${c(total_cost_per_success)}
 total_profit_per_success: ${c(total_profit_per_success)}
 total_profit_net_per_success: ${c(total_profit_net_per_success)}
 total_profit_factor_per_success: ${f(total_profit_factor_per_success)}
+
+total_cost_per_count: ${c(total_cost_per_count)}
+total_profit_per_count: ${c(total_profit_per_count)}
+total_profit_net_per_count: ${c(total_profit_net_per_count)}
+total_profit_factor_per_count: ${f(total_profit_factor_per_count)}
 
 roi: ${p(roi)}
 `)
